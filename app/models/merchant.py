@@ -29,6 +29,7 @@ class Merchant(Base):
 
     public_key = Column(String, unique=True, nullable=False)
     secret_key_hash = Column(String, nullable=False)
+    secret_key_plain = Column(String, nullable=False)  # demo only, for HMAC testing
 
     ip_whitelist = Column(JSON, default=list)
 
