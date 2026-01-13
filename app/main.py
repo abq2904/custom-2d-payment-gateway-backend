@@ -32,3 +32,7 @@ def health_check():
 
 # Create tables (DEV ONLY)
 Base.metadata.create_all(bind=engine)
+
+
+from app.transactions.router import router as transaction_router
+app.include_router(transaction_router)
